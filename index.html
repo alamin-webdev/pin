@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 center">
+                <input type="text" id="generatedPinField" class="pin_field">
+                <button id="generatePinBtn" class="generateBtn">Generate Pin</button>
+            </div>
+            <div class="col-6 center">
+                <input type="text" id="pinInputField" class="pin_field">
+                <div class="num_pad">
+                    <div class="number">
+                        <button onclick="numPad(this.innerText)">7</button>
+                        <button onclick="numPad(this.innerText)">8</button>
+                        <button onclick="numPad(this.innerText)">9</button>
+                    </div>
+                    <div class="number">
+                        <button onclick="numPad(this.innerText)">4</button>
+                        <button onclick="numPad(this.innerText)">5</button>
+                        <button onclick="numPad(this.innerText)">6</button>
+                    </div>
+                    <div class="number">
+                        <button onclick="numPad(this.innerText)">1</button>
+                        <button onclick="numPad(this.innerText)">2</button>
+                        <button onclick="numPad(this.innerText)">3</button>
+                    </div>
+                    <div class="number">
+                        <button onclick="backspace()"><</button>
+                        <button onclick="numPad(this.innerText)">0</button>
+                        <button onclick="clearDis()">C</button>
+                    </div>
+                    <button id="submitBtn" onclick="pinSubmit()" class="submitBtn">Submit</button>
+                </div>
+                <small id="tryMsg">You have <span id="totalTry">3</span> try left</small>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
